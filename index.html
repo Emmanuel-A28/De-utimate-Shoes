@@ -23,7 +23,13 @@
                     <li><a href="./services">Services</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                 </ul>
-                <a href="./contact" class="p-2 rounded-lg text-white bg-amber-900 flex items-center gap-2">
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1">
+                    <span class="block w-6 h-0.5 bg-amber-900"></span>
+                    <span class="block w-6 h-0.5 bg-amber-900"></span>
+                    <span class="block w-6 h-0.5 bg-amber-900"></span>
+                </button>
+                <a href="./contact" class="hidden md:flex p-2 rounded-lg text-white bg-amber-900 items-center gap-2">
                     <span>Contact Us</span>
                     <span>
                         <svg width="25" height="14" viewBox="0 0 25 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,9 +38,29 @@
                     </span>
                 </a>
             </nav>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="fixed inset-0 bg-transparent bg-opacity-50 z-50 md:hidden hidden">
+                <div class="bg-white w-64 h-full p-4">
+                    <div class="flex justify-between items-center mb-8">
+                        <span class="font-bold text-amber-900">Menu</span>
+                        <button id="close-mobile-menu" class="text-amber-900">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="space-y-4">
+                        <li><a href="./" class="block py-2 text-amber-900 underline">Home</a></li>
+                        <li><a href="./about" class="block py-2 text-amber-900">About Us</a></li>
+                        <li><a href="./services" class="block py-2 text-amber-900">Services</a></li>
+                        <li><a href="#gallery" class="block py-2 text-amber-900">Gallery</a></li>
+                        <li><a href="./contact" class="block py-2 px-4 bg-amber-900 text-white rounded-lg mt-4">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="flex flex-col items-center justify-center text-center mt-8">
                 <div class="z-3 max-w-[600px]">
-                    <h1 class="font-bold text-4xl">Where Every Shoe Tells a Story.</h1>
+                    <h1 class="font-bold text-2xl md:text-4xl">Where Every Shoe Tells a Story.</h1>
                     <p class="font-semibold">From timeless repairs to doorstep delivery, we bring premium footwear solutions to you, for every sole and every style.</p>
                     <div class="flex flex-col md:flex-row gap-4 justify-center mt-4">
                         <a href="#services" class="flex p-2 gap-2 justify-center items-center text-white bg-amber-950 rounded-lg"><span>Order Custom Shoes </span>
@@ -53,7 +79,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="heroimg w-1/2 flex justify-center items-center relative mt-16">
+                <div class="heroimg w-full md:w-1/2 flex justify-center items-center relative mt-8 md:mt-16">
                     <img src="./assets/images/heroshoe1.png" alt="" class="absolute z-2 left-1/2 -translate-x-1/2 -top-4/5">
                     <div><img src="./assets/images/herobase.png" alt=""></div>
                 </div>
@@ -62,9 +88,9 @@
     </section>
     <!--Services Section-->
     <section class="bg-[#D9D9D9]" id="services">
-        <div class="flex flex-col items-center justify-center p-10">
+        <div class="flex flex-col items-center justify-center p-4 md:p-10">
             <div class="max-w-[500px] text-center">
-                <h2 class="text-3xl font-bold">Our Services</h2>
+                <h2 class="text-xl md:text-3xl font-bold">Our Services</h2>
                 <p>Everything your shoes need, from sales to repairs, pickups to doorstep delivery.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-4 mt-8">
@@ -107,11 +133,11 @@
         </svg>
 
         <div class="flex flex-col md:flex-row p-2 md:p-4">
-            <div class="md:w-1/2 justify-center">
+            <div class="md:w-1/2 flex justify-center">
                 <img src="./assets/images/logo.png" alt="" class="bg-[url('../assets/images/pinnedframe.png')] bg-contain bg-no-repeat bg-center p-12">
             </div>
             <div class="flex flex-col justify-center md:w-1/2">
-                <h2 class="text-3xl font-bold">Why Choose De Ultimate Cobbler?</h2>
+                <h2 class="text-xl md:text-3xl font-bold">Why Choose De Ultimate Cobbler?</h2>
                 <p>Because your shoes deserve more than just a fix, they deserve care, craft, and class.</p>
                 <ul class="flex flex-col gap-4 mt-4">
                     <li class="flex items-start gap-4">
@@ -161,7 +187,7 @@
 
         <div class="flex flex-col items-center justify-center">
             <div class="text-center">
-                <h2 class="text-3xl font-bold">See Our Craft</h2>
+                <h2 class="text-xl md:text-3xl font-bold">See Our Craft</h2>
                 <p>Because your shoes deserve more than just a fix, they deserve care, craft, and class.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-4 mt-8">
@@ -184,7 +210,7 @@
 
         <div class="flex flex-col items-center justify-center p-4">
             <div class="text-center mb-5 max-w-[500px]">
-                <h2 class="text-3xl font-bold">What Our Customers Are Saying</h2>
+                <h2 class="text-xl md:text-3xl font-bold">What Our Customers Are Saying</h2>
                 <p>Real words from satisfied clients who trust us with their shoes.</p>
             </div>
             <div class="flex flex-col lg:flex-row gap-6">
@@ -217,7 +243,7 @@
             <path fill="#BFC2C4" fill-opacity="1" d="M0,32L60,32C120,32,240,32,360,64C480,96,600,160,720,160C840,160,960,96,1080,64C1200,32,1320,32,1380,32L1440,32L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
         </svg>
         <div class='gap-4 flex flex-col items-center justify-center p-8'>
-            <h2 class='font-semibold text-4xl text-center max-w-[700px]'>Ready to restore your shoes, or make something custom?</h2>
+            <h2 class='font-semibold text-2xl md:text-4xl text-center max-w-[700px]'>Ready to restore your shoes, or make something custom?</h2>
             <div class="flex flex-col md:flex-row gap-5">
                 <a href="#contact" class="p-2 rounded-lg text-white bg-amber-950 flex items-center gap-2">
                     <span>Order Custom Shoes</span>
@@ -242,7 +268,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#D9D9D9" fill-opacity="1" d="M0,32L60,32C120,32,240,32,360,64C480,96,600,160,720,160C840,160,960,96,1080,64C1200,32,1320,32,1380,32L1440,32L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
         </svg>
-        <div class="grid md:grid-cols-5 px-10 pb-20 gap-8" id="footer">
+        <div class="grid md:grid-cols-5 px-4 md:px-10 pb-10 md:pb-20 gap-4 md:gap-8" id="footer">
             <div>
                 <img src="./assets/images/logo.png" alt="" class="w-24">
                 <p class="font-semibold font-5">De Ultimate</p>
@@ -295,6 +321,27 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Close menu when clicking outside
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

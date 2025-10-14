@@ -11,14 +11,23 @@
     <section class='hero bg-[#BFC2C4] flex flex-col justify-center'>
         <div class="p-4 pb-16 bg-[url('../assets/images/aboutHero.svg')] bg-contain bg-center">
             <nav class="flex backdrop-blur-md justify-between bg-white/30 items-center shadow-md p-4 rounded-2xl inset-4">
-                <div class="flex gap-3 justify-center items-center"><span><img src="../assets/images/logo.png" alt="" class="w-10"></span>De Ultimate Cobbler</div>
+                <div class="flex gap-3 justify-center items-center">
+                    <span><img src="../assets/images/logo.png" alt="" class="w-10"></span>
+                    <span class="hidden md:flex">De Ultimate Cobbler</span>
+                </div>
                 <ul class='hidden md:flex gap-4'>
                     <li><a href="../">Home</a></li>
                     <li><a href="../about" class="underline text-amber-950">About Us</a></li>
                     <li><a href="../services">Services</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                 </ul>
-                <a href="../contact" class="p-2 rounded-lg text-white bg-amber-950 flex gap-2">
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1">
+                    <span class="block w-6 h-0.5 bg-amber-900"></span>
+                    <span class="block w-6 h-0.5 bg-amber-900"></span>
+                    <span class="block w-6 h-0.5 bg-amber-900"></span>
+                </button>
+                <a href="../contact" class="hidden md:flex p-2 rounded-lg text-white bg-amber-950 items-center gap-2">
                     <span> Contact Us</span>
                     <span>
                         <svg width="25" height="14" viewBox="0 0 25 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,11 +36,31 @@
                     </span>
                 </a>
             </nav>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="fixed inset-0 bg-transparent bg-opacity-50 z-50 md:hidden hidden">
+                <div class="bg-white w-64 h-full p-4">
+                    <div class="flex justify-between items-center mb-8">
+                        <span class="font-bold text-amber-900">Menu</span>
+                        <button id="close-mobile-menu" class="text-amber-900">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="space-y-4">
+                        <li><a href="../" class="block py-2 text-amber-900">Home</a></li>
+                        <li><a href="../about" class="block py-2 text-amber-900 underline">About Us</a></li>
+                        <li><a href="../services" class="block py-2 text-amber-900">Services</a></li>
+                        <li><a href="#gallery" class="block py-2 text-amber-900">Gallery</a></li>
+                        <li><a href="../contact" class="block py-2 px-4 bg-amber-900 text-white rounded-lg mt-4">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="flex flex-col items-center justify-center text-center mt-8">
                 <div class="max-w-[600px]">
-                <h1 class="text-4xl font-bold">Where Craft Meets Comfort</h1>
+                <h1 class="text-2xl md:text-4xl font-bold">Where Craft Meets Comfort</h1>
                 <p class="font-semibold">At De Ultimate Cobbler, we believe shoes are more than just fashion, they’re an extension of you. That’s why we’re dedicated to restoring, designing, and delivering footwear that feels just right.</p>
-                <div class="flex gap-4 justify-center items-center">
+                <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
                     <a href="../services" class="flex p-2 gap-2 items-center text-white bg-amber-950 rounded-lg">
                         <span>Order Custom Shoes </span>
                         <span>
@@ -60,18 +89,18 @@
                 <img src="../assets/images/story.png" alt="" class="max-w-[400px]">
             </div>
             <div class="flex flex-col justify-center md:w-1/2 text-left">
-                <h2 class="font-bold text-3xl">Our Story</h2>
+                <h2 class="font-bold text-xl md:text-3xl">Our Story</h2>
                 <p>De Ultimate Cobbler began with a passion for great shoes and a simple belief: quality shouldn’t be compromised. What started as a small repair bench has grown into a trusted name for custom footwear, fast repairs, and reliable delivery across Nigeria. </p>
                 <br>
                 <p>With years of hands-on experience, we combine traditional techniques with modern convenience to give every shoe, and every customer, the care they deserve.</p>
             </div>
         </div>
-        <div class="flex">
-            <div class="flex items-center w-1/2">
+        <div class="flex flex-col md:flex-row">
+            <div class="flex items-center justify-center md:w-1/2">
                 <img src="../assets/images/value.png" alt="" class="max-w-[400px]">
             </div>
-            <div class="flex flex-col justify-center w-1/2 text-left gap-6">
-                <h2 class="font-bold text-3xl">Our Values</h2>
+            <div class="flex flex-col justify-center md:w-1/2 text-left gap-6">
+                <h2 class="font-bold text-xl md:text-3xl">Our Values</h2>
                 <li class="flex justify-center gap-5">
                     <div class="aspect-square flex justify-center items-center p-1 rounded-full bg-[#D9D9D9]">
                         <ion-icon name="business-outline"></ion-icon>
@@ -116,9 +145,9 @@
             <path fill="#BFC2C4" fill-opacity="1" d="M0,32L60,32C120,32,240,32,360,64C480,96,600,160,720,160C840,160,960,96,1080,64C1200,32,1320,32,1380,32L1440,32L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
         </svg>
         <div class='gap-4 flex flex-col items-center justify-center p-8'>
-            <h2 class='font-semibold text-4xl text-center max-w-[700px]'>Serving You, Wherever You Are</h2>
+            <h2 class='font-semibold text-2xl md:text-4xl text-center max-w-[700px]'>Serving You, Wherever You Are</h2>
             <p>Whether you're in need of a quick polish or a completely new pair, De Ultimate Cobbler is here to help in-store or at your doorstep.</p>
-            <div class="flex gap-5">
+            <div class="flex flex-col md:flex-row gap-5">
                 <a href="../contact" class="p-2 rounded-lg text-white bg-amber-950 flex gap-2 justify-center items-center">
                    <span>Book a Repair</span>
                     <span>
@@ -142,7 +171,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#D9D9D9" fill-opacity="1" d="M0,32L60,32C120,32,240,32,360,64C480,96,600,160,720,160C840,160,960,96,1080,64C1200,32,1320,32,1380,32L1440,32L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
         </svg>
-        <div class="grid md:grid-cols-5 px-10 pb-20 gap-8" id="footer">
+        <div class="grid md:grid-cols-5 px-4 md:px-10 pb-10 md:pb-20 gap-4 md:gap-8" id="footer">
             <div>
                 <img src="../assets/images/logo.png" alt="" class="w-24">
                 <p class="font-semibold font-5">De Ultimate</p>
@@ -195,6 +224,27 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Close menu when clicking outside
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
