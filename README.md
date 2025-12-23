@@ -8,37 +8,10 @@ Figma file:
 Collaborators:
 
 [Sweetness](https://github.com/sweetneas-dev) and [Ariyo](https://github.com/ariyoaresa)
-hello
-  DE‑ULTIMATE‑SHOES
-
-De‑Ultimate‑Shoes is a dynamic, modern e‑commerce web platform showcasing shoes with sleek design and seamless user experience — built to delight customers and streamline shoe browsing and shopping.
 
 
-About the Project
+De-Ultimate-Shoes is a modern advertising website created to promote and showcase shoe products. The website focuses on brand visibility, product presentation, and visualisation.
 
-Welcome to De‑Ultimate‑Shoes — the future of online shoe browsing and shopping! This web project brings together:
+It is designed to display shoe collections, highlight product features, and support marketing efforts through a clean and responsive user interface.
 
-Responsive UI/UX so users can shop from phones, tablets, or desktops.
-
-Clean product catalog showcasing shoe collections.
-
-Interactive navigation and intuitive look-and-feel.
-
-A foundation ready for cart and checkout integration.
-
-
-
-
- Features
-
-Just like a shoe store window that draws people in, here’s what makes De‑Ultimate‑Shoes stand out:
-
- Responsive layout — adapts to all screen sizes.
-
-lProduct Showcase — display shoe products with images, descriptions, and prices.
-
-Search/Filter (if applicable) — help customers find products quickly.
-
-Fast load times thanks to optimized assets.
-
-Ready for backend e‑commerce integration (cart, payments).
+Technologies used: HTML, CSS, and JavaScript.
